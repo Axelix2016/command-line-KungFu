@@ -1,4 +1,16 @@
 ###################################
+# edit your bashfile
+# $ vim ~/.bashrc
+###################################
+# make it work immediadetely
+# source ~/.bashrc
+# or just
+# . ~/.bashrc
+# to restart bash
+###################################
+# use echo
+# echo "alias aliasname='command'" >> ~/.bash_aliases && tail -1 ~/.bash_aliases && source ~/.bash_aliases && echo 'added to bash'
+###################################
 # Aliases to add to your bash: ####
 ###################################
 #
