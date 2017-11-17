@@ -1,3 +1,11 @@
 ############################################################################################################
 # tail -f log.txt | egrep --line-buffered 'WARN|ERROR' | tee filtered_output.txt && tail filtered_output.txt
+# tail -f /var/log/syslog 
+#
+#
+#
+#
+#
+#
+#
 #
