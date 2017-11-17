@@ -29,14 +29,14 @@ if [ "$#" -ne "1" ]; then
     exit 1
 fi
 
-#Get current length of the file
+# Get current length of the file
 len=`wc -l $LOGFILE | awk '{ print $1 }'`
 echo "Current size is $len lines."
 
 while :
 do
     if [ -N $LOGFILE ]; then
-        echo "`date`: New Entries in $LOGFILE: "
+        echo "`date`: Changes in $LOGFILE: "
         newlen=`wc -l $LOGFILE | awk ' { print $1 }'`
         newlines=`expr $newlen - $len`
         tail -$newlines $LOGFILE
