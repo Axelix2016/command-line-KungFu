@@ -1,0 +1,17 @@
+#####################################################################################
+#!/bin/sh
+
+# Detect when "file" named by param $1 changes.
+# When it changes, do command specified by other params.
+
+F=$1
+shift
+P="$*"
+
+# Result of inotifywait is put in S so it doesn't echo
+while  S=$(inotifywait -eMODIFY $F 2>/dev/null)
+do
+  # Remove printf if timestamps not wanted 
+  printf "At %s: \n" "$(date)"
+  $P
+done
