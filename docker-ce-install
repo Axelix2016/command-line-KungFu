@@ -70,5 +70,5 @@ $ sudo usermod -aG docker your-user
 #          Refer to https://docs.docker.com/engine/security/security/#docker-daemon-attack-surface
 #          for more information.
 #
-#
-#
+# Post-installation steps for Linux
+# https://docs.docker.com/engine/installation/linux/linux-postinstall/
