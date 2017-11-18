@@ -1,6 +1,6 @@
 # Prerequisites:
 # needs docker + docker-compose installed + running
-# Prepare environment
+# Prepare environment: prepare-nginx-wordpress.sh or manual
 useradd -m -s /bin/bash wpress
 passwd wpress
 usermod -a -G docker wpress
