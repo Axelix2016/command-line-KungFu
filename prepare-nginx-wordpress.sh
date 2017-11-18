@@ -32,8 +32,7 @@ echo '############################################'
 sudo touch /home/wpress/wordpress-compose/nginx/wordpress.conf
 echo 'datei /home/wpress/wordpress-compose/nginx/wordpress.conf erfolreich angelegt!'
 echo '############################################'
-cd /home/wpress/
-sudo tree
+sudo tree /home
 echo '############################################'
 su - wpress
 ### eof ##################
