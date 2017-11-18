@@ -1,3 +1,7 @@
+# Easiest way ist to use the Shell-Script from get.docker.com
+#
+# see file get-docker.sh
+##############################################################
 # Where necessary remove older versions
 $ sudo apt-get remove docker docker-engine docker.io
 #
@@ -56,6 +60,9 @@ $ curl -fsSL get.docker.com -o get-docker.sh
 $ sudo sh get-docker.sh
 #
 #<output truncated>
+#
+# Get version
+$ sudo -E sh -c 'docker version'
 #
 # If you would like to use Docker as a non-root user, you should now consider
 # adding your user to the "docker" group with something like:
