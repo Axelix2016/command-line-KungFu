@@ -1,3 +1,5 @@
+# Prerequisites:
+# needs docker + docker-compose installed + running
 # Prepare environment
 useradd -m -s /bin/bash wpress
 passwd wpress
