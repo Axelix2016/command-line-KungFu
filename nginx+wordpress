@@ -1,0 +1,94 @@
+# Prepare environment
+useradd -m -s /bin/bash wpress
+passwd wpress
+usermod -a -G docker wpress
+systemctl restart docker
+su - wpress
+mkdir -p wordpress-compose
+cd wordpress-compose/
+touch docker-compose.yml
+mkdir -p nginx/
+mkdir -p db-data/
+mkdir -p logs/nginx/
+mkdir -p wordpress/
+vim nginx/wordpress.conf
+### Paste configuration below:
+server {
+    listen 80;
+    server_name wp-wpress.co;
+    
+    root /var/www/html;
+    index index.php;
+    
+    access_log /var/log/nginx/wpress-access.log;
+    error_log /var/log/nginx/wpress-error.log;
+    
+    location / {
+        try_files $uri $uri/ /index.php?$args;
+        }
+        
+        location ~ \.php$ {
+        try_files $uri =404;
+        fastcgi_split_path_info ^(.+\.php)(/.+)$;
+        fastcgi_pass wordpress:9000;
+        fastcgi_index index.php;
+        include fastcgi_params;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        fastcgi_param PATH_INFO $fastcgi_path_info;
+        }
+}
+#################
+vim docker-compose.yml
+# Paste configuration below:
+nginx:
+    image: nginx:latest
+    ports:
+        - '80:80'
+    volumes:
+        - ./nginx:/etc/nginx/conf.d
+        - ./logs/nginx:/var/log/nginx
+        - ./wordpress:/var/www/html
+    links:
+        - wordpress
+    restart: always
+##################
+# Paste configuration below:
+mysql:
+    image: mariadb
+    ports:
+        - '3306:3306'
+    volumes:
+        - ./db-data:/var/lib/mysql
+    environment:
+        - MYSQL_ROOT_PASSWORD=aqwe777
+    restart: always
+##################
+Paste configuration below:
+wordpress:
+    image: wordpress:4.7.1-php7.0-fpm
+    ports:
+        - '9000:9000'
+    volumes:
+        - ./wordpress:/var/www/html
+    environment:
+        - WORDPRESS_DB_NAME=wpdb
+        - WORDPRESS_TABLE_PREFIX=wp_
+        - WORDPRESS_DB_HOST=mysql
+        - WORDPRESS_DB_PASSWORD=aqwe777
+    links:
+        - mysql
+    restart: always
+###################
+#After adding the three parts into the docker-compose.yml file, save the file and exit the vim editor.
+#########################
+cd ~/wordpress-compose/
+docker-compose up -d
+docker-compose ps
+# If you want to see the log output from the container, you can use commands below:
+docker-compose logs nginx
+docker-compose logs mysql
+docker-compose logs wordpress
+# Install Wordpress
+netstat -plntu
+# Now open your web browser and type in the server URL or IP address.
+http://<serverIP>/
