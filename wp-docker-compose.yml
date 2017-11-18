@@ -1,4 +1,5 @@
 ### belongs to wpress+nginx
+### rename to docker-compose.yml
 ### filename: docker-compose.yml
 ### version: 1
 ##################
