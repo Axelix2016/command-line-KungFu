@@ -1,0 +1,74 @@
+# Where necessary remove older versions
+$ sudo apt-get remove docker docker-engine docker.io
+#
+# Update the apt package index:
+$ sudo apt-get update
+#
+# Install packages to allow apt to use a repository over HTTPS:
+$ sudo apt-get install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    software-properties-common
+# 
+# Add Docker’s official GPG key:
+#$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+#
+# Verify that you now have the key with the fingerprint 9DC8 5822 9FC7 DD38 854A E2D8 8D81 803C 0EBF CD88, by searching for the last 8 characters of the fingerprint.
+#
+$ sudo apt-key fingerprint 0EBFCD88
+
+pub   4096R/0EBFCD88 2017-02-22
+      Key fingerprint = 9DC8 5822 9FC7 DD38 854A  E2D8 8D81 803C 0EBF CD88
+uid                  Docker Release (CE deb) <docker@docker.com>
+sub   4096R/F273FCD8 2017-02-22
+#
+# Use the following command to set up the stable repository.
+#
+$ sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+#
+# INSTALL DOCKER CE
+#
+# Update the apt package index.
+#
+$ sudo apt-get install docker-ce
+#
+# Install the latest version of Docker CE, or go to the next step to install a specific version. 
+# Any existing installation of Docker is replaced.
+#
+$ sudo apt-get install docker-ce
+#
+# List the available versions.
+$ apt-cache madison docker-ce 
+docker-ce | 17.09.0~ce-0~ubuntu | https://download.docker.com/linux/ubuntu xenial/stable amd64 Packages
+#
+#
+$ sudo apt-get install docker-ce=<VERSION>
+#
+$ sudo docker run hello-world
+#
+# with script get-docker.sh from get.docker.com to install the latest stable release of Docker CE on Linux:
+#
+$ curl -fsSL get.docker.com -o get-docker.sh
+$ sudo sh get-docker.sh
+#
+#<output truncated>
+#
+# If you would like to use Docker as a non-root user, you should now consider
+# adding your user to the "docker" group with something like:
+#
+$ sudo usermod -aG docker your-user
+#
+# Remember that you will have to log out and back in for this to take effect!
+#
+# WARNING: Adding a user to the "docker" group will grant the ability to run
+#          containers which can be used to obtain root privileges on the
+#          docker host.
+#          Refer to https://docs.docker.com/engine/security/security/#docker-daemon-attack-surface
+#          for more information.
+#
+#
+#
