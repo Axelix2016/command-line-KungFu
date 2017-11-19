@@ -63,7 +63,7 @@
 # alias ducks='du -cks * |sort -rn |head -11'
 #
 # Find hidden processes (rootkit defense)
-# alias hidden=ls -d /proc/* |grep [0-9]|wc -l; ps ax |wc -l
+# alias hidden='ls -d /proc/* |grep [0-9]|wc -l; ps ax |wc -l'
 # vergleicht die Anzahl laufender prozesse mit denen die ps ausgibt.
 # ist die Anzahl bei mehrmaliger Ausführung stark unterschiedlich ist was faul.
 #
