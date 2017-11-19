@@ -10,6 +10,14 @@
 ###################################
 # use echo
 # echo "alias aliasname='command'" >> ~/.bash_aliases && tail -1 ~/.bash_aliases && source ~/.bash_aliases && echo 'added to bash'
+#
+###################################
+# load aliases from .bash_aliases #
+###################################
+# if [ -f ~/.bash_aliases ]; then
+#     . ~/.bash_aliases
+# fi
+#
 ###################################
 # Aliases to add to your bash: ####
 ###################################
@@ -63,5 +71,19 @@
 # alias eth1='ifconfig eth1'
 # alias eth2='ifconfig eth2'
 #
-#alias grepall="find -type f -exec grep -q $1 {} \; -print"
+# alias grepall="find -type f -exec grep -q $1 {} \; -print"
 #
+# alias checkupdates='sudo apt-get update && sudo apt-get upgrade'
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+##
+
+
