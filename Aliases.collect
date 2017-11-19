@@ -59,9 +59,9 @@
 # vergleicht die Anzahl laufender prozesse mit denen die ps ausgibt.
 # ist die Anzahl bei mehrmaliger Ausführung stark unterschiedlich ist was faul.
 #
-#
-#
-#
+# alias eth0='ifconfig eth0'
+# alias eth1='ifconfig eth1'
+# alias eth2='ifconfig eth2'
 #
 #
 #
