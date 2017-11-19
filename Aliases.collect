@@ -43,7 +43,7 @@
 # alias untarz='tar -xzf'
 # alias untarj='tar -xjf'
 #
-#This will set a fancy prompt (PS1):
+# This will set a fancy prompt (PS1):
 # export PS1="\[\033[01;33m\][$USER@$HOSTNAME]\[\033[0;00m\] \[\033[01;32m\]\w\\$\[\033[0;00m\] "
 #
 # Add a greeting, to be displayed whenever Bash runs interactively:
@@ -51,7 +51,8 @@
 # echo -e "Today is $(date)\nUptime: $(uptime)"
 # echo "Your personal settings have been loaded successfully."
 #
-#
+# Speicher-Platzfresser ermitteln:
+# alias ducks='du -cks * |sort -rn |head -11'
 #
 #
 #
