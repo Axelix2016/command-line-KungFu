@@ -1,0 +1,42 @@
+#!/bin/sh
+# 
+# Easy whitelist-blacklist firewall
+#
+WHITELIST=/usr/local/etc/whitelist.txt
+BLACKLIST=/usr/local/etc/blacklist.txt
+#
+ALLOWED="22 25 80 443"
+#
+# remove all existing rules
+#
+iptables -F
+#
+# accept whitelist
+#
+for x in `grep -v ^# $WHITELIST | awk '{print $1}'`; do
+  echo "Allow $x..."
+  iptables -A INPUT -t filter -s $x -j ACCEPT
+done
+#
+# block blacklist
+#
+for x in `grep -v ^# $BLACKLIST | awk '{print $1}'`; do
+  echo "Block $x..."
+  iptables -A INPUT -t filter -s $x -j DROP
+done
+#
+# ports allowd
+#
+for port in $ALLOWED; do
+   echo "Allow Port $port..."
+   iptables -A INPUT -t filter -p tcp --dport $port -j ACCEPT
+done
+#
+# filter Startup-requests
+#
+iptables -A INPUT -t filter -p tcp --syn -j DROP
+#
+#
+#
+#
+#
