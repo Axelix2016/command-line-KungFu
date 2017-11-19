@@ -75,8 +75,9 @@
 #
 # alias checkupdates='sudo apt-get update && sudo apt-get upgrade'
 #
-#
-#
+# ubuntu examples:
+# sudo apt install bash-doc
+# /usr/share/doc/bash-doc/examples
 #
 #
 #
