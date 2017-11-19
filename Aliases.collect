@@ -63,5 +63,5 @@
 # alias eth1='ifconfig eth1'
 # alias eth2='ifconfig eth2'
 #
-#
+#alias grepall="find -type f -exec grep -q $1 {} \; -print"
 #
