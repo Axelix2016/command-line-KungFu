@@ -1,0 +1,15 @@
+
+# variables that must be set:
+$EXT-IFACE
+$INT_IFACE
+$DEST_IP
+# create syn-flood to identify DoS attacks
+iptables -t nat -N syn-flood
+# restrict to 12 connections per second
+iptables -t nat -A syn-flood -m limit --limit 12/s --limit-burst 24 \
+  -j RETURN
+iptables -t nat -A syn-flood -j DROP
+# check for DoS attack
+iptables -t nat -A PREROUTING -i $EXT_IFACE -d $DEST_IP -p tcp --syn \
+  -j syn-flood
+# these rules restricts incoming TCP-connections (with SYN-Bit flag) to 12/s after 24/s are reached.
