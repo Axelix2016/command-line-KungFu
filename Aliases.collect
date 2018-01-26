@@ -79,12 +79,63 @@
 # sudo apt install bash-doc
 # /usr/share/doc/bash-doc/examples
 #
+###################
+# Appendix A      #
+# Sharpen the saw #
+###################
+# To make this change persistent, add the lines to your ~/.bashrc file.
+# My aliases:
+# Runs apt-get always as root:
+# alias apt-get='sudo apt-get'
+# This gives live to the command ll:
+# alias ll='ls -l'
+# Get to home directory:
+# alias home='cd ~'
 #
+# just for safety
+# alias cp='cp -i'
+# alias ln='ln -s'
+# alias mv='mv -i'
+# alias rm='rm -i'
 #
+# convenience redefinitions
+# alias cd..='cd ..'
+# alias cd-='cd -'
+# alias dselect='dselect --expert'
+# alias fg-='fg -'
+# alias l='ls -l'
+# alias ll='ls -la'
+# alias lla='ls -la'
+# alias ls='ls --color=auto'
+# alias md=mkdir
+# alias rd=rmdir
+# alias su-='sudo su -'
 #
-#
-#
-#
-##
+# inventions
+# alias fgg=jobs
+# alias ghist='history|grep'
+# alias lf='find -type f|sort'
+# alias load='cat /proc/loadavg'
+# alias meminfo='cat /proc/meminfo'
+# logs
+# alias mylogs='sudo tail -f /var/log/{apache2/*log,squid/access.log,otrs.log,exim*log,messages}'
+# alias mylogs2='sudo tail -f /var/log/{syslog,daemon.log,user.log,router.log}'
+# OTRS
+# alias vio='vi /opt/otrs/Kernel/{Config/Defaults.pm,Config.pm}'
 
+# Kalendar
+# alias kal='clear;echo -n "Heutiges Datum: ";date;echo;cal -3m'
 
+# switch off
+# alias s &>/dev/null && unalias s
+# alias p &>/dev/null && unalias p
+#
+#
+#
+#
+#
+#
+#
+#####
+#eof#
+#####
