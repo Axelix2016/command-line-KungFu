@@ -26,6 +26,7 @@
 # alias findRecent='find . -type f -mtime 0'
 #
 # Self explaining aliases:
+# alias ver="cat /etc/lsb-release"
 # alias ip="ip -4 -o addr show eth0 | awk -F'[/, ]' '{print $7 }'"
 # alias dir="ls -al"
 # alias ll="ls -l"
