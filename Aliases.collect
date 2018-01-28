@@ -26,7 +26,7 @@
 # alias findRecent='find . -type f -mtime 0'
 #
 # Self explaining aliases:
-# alias ip="ip -4 -o addr show eth0 | awk -F"[/, ]" '{print $7 }'"
+# alias ip="ip -4 -o addr show eth0 | awk -F'[/, ]' '{print $7 }'"
 # alias dir="ls -al"
 # alias ll="ls -l"
 # alias all="ls -al"
@@ -124,7 +124,7 @@
 # alias vio='vi /opt/otrs/Kernel/{Config/Defaults.pm,Config.pm}'
 
 # Kalendar
-# alias kal='clear;echo -n "Heutiges Datum: ";date;echo;cal -3m'
+# alias kal='clear;echo -n "Heutiges Datum: ";date;echo;cal -3'
 
 # switch off
 # alias s &>/dev/null && unalias s
