@@ -27,7 +27,7 @@
 #
 # Self explaining aliases:
 # alias ver="cat /etc/lsb-release"
-# alias ip="ip -4 -o addr show eth0 | awk -F'[/, ]' '{print $7 }'"
+# alias ip="ip route get 8.8.8.8 | awk '{print $NF; exit}'"
 # alias dir="ls -al"
 # alias ll="ls -l"
 # alias all="ls -al"
