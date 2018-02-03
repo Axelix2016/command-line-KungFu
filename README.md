@@ -1,5 +1,5 @@
 # command-line-KungFu  
-KungFu for command-line junkeys  
+KungFu for command-line junkeys and console-jockeys.
 It is a collection of scripts and listings that help automize and speed up commandline tasks.  
 Enjoy!  
   
