@@ -1,7 +1,7 @@
 ###################################
 # edit your bashfile
 # $ vim ~/.bashrc
-# git clone https://github.com/Axelix2016/command-line-KungFu/blob/master/Aliases.collect ~/cmd-KungFu
+# git clone https://github.com/Axelix2016/command-line-KungFu/blob/master/Aliases.collect ~/cmd-KungFu/
 ###################################
 # make it work immediadetely
 # source ~/.bashrc
