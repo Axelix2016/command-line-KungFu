@@ -1,6 +1,7 @@
 ###################################
 # edit your bashfile
 # $ vim ~/.bashrc
+# 
 ###################################
 # make it work immediadetely
 # source ~/.bashrc
@@ -48,17 +49,22 @@
 # alias chr='chmod 644'
 # alias ports='netstat -tulanp'
 # alias lsh='ls -lhXG' # long listing, human-readable, sort by extension, do not show group info
-
+# alias grep="grep -i"  # ignore case
+# alias x="exit"
+# alias dus='df -h'
+# alias ...='cd ../..'
+# alias umnt='umount /mnt/cdrom'  # cdrom / thumb drive.
+#
 ## shortcut  for iptables and pass it via sudo#
 # alias ipt='sudo /sbin/iptables'
-
+#
 ## display all rules #
 # alias iptlist='sudo /sbin/iptables -L -n -v --line-numbers'
 # alias iptlistin='sudo /sbin/iptables -L INPUT -n -v --line-numbers'
 # alias iptlistout='sudo /sbin/iptables -L OUTPUT -n -v --line-numbers'
 # alias iptlistfw='sudo /sbin/iptables -L FORWARD -n -v --line-numbers'
 # alias firewall=iptlist
-
+#
 # Uncompress GZIP and BZIP archives:
 # alias untarz='tar -xzf'
 # alias untarj='tar -xjf'
