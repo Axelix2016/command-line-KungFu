@@ -34,24 +34,93 @@
 # alias groups="cut -d -f1 /etc/group |sort"
 # alias users=""cut -d -f1 /etc/passwd |sort"
 # alias ax="chmod a+x"
-#
+# alias mount='mount |column -t'
 # alias mem='top'
-#
+# alias h='history'
 # alias cputemp='sensors | grep Core'
-#
+# alias j='jobs -l'
 # alias runapache='sudo service apache2 restart'
 # alias stopapache='sudo service apache2 stop'
-# 
+# alias path='echo -e ${PATH//:/\\n}'
 # alias update='sudo apt-get update && sudo apt-get dist-upgrade'
-#
+# alias edit='vim'
 # alias chx='chmod 755'
 # alias chr='chmod 644'
-#
+# alias ports='netstat -tulanp'
 # alias lsh='ls -lhXG' # long listing, human-readable, sort by extension, do not show group info
-#
+
+## shortcut  for iptables and pass it via sudo#
+# alias ipt='sudo /sbin/iptables'
+
+## display all rules #
+# alias iptlist='sudo /sbin/iptables -L -n -v --line-numbers'
+# alias iptlistin='sudo /sbin/iptables -L INPUT -n -v --line-numbers'
+# alias iptlistout='sudo /sbin/iptables -L OUTPUT -n -v --line-numbers'
+# alias iptlistfw='sudo /sbin/iptables -L FORWARD -n -v --line-numbers'
+# alias firewall=iptlist
+
 # Uncompress GZIP and BZIP archives:
 # alias untarz='tar -xzf'
 # alias untarj='tar -xjf'
+## reboot / halt / poweroff
+# alias reboot='sudo /sbin/reboot'
+# alias poweroff='sudo /sbin/poweroff'
+# alias halt='sudo /sbin/halt'
+# alias shutdown='sudo /sbin/shutdown'
+#
+## also pass it via sudo so whoever is admin can reload it without calling you #
+# alias nginxreload='sudo /usr/local/nginx/sbin/nginx -s reload'
+# alias nginxtest='sudo /usr/local/nginx/sbin/nginx -t'
+# alias lightyload='sudo /etc/init.d/lighttpd reload'
+# alias lightytest='sudo /usr/sbin/lighttpd -f /etc/lighttpd/lighttpd.conf -t'
+# alias httpdreload='sudo /usr/sbin/apachectl -k graceful'
+# alias httpdtest='sudo /usr/sbin/apachectl -t && /usr/sbin/apachectl -t -D DUMP_VHOSTS'
+#
+## All of our servers eth1 is connected to the Internets via vlan / router etc  ##
+# alias dnstop='dnstop -l 5  eth1'
+# alias vnstat='vnstat -i eth1'
+# alias iftop='iftop -i eth1'
+# alias tcpdump='tcpdump -i eth1'
+# alias ethtool='ethtool eth1'
+#
+# work on wlan0 by default #
+# Only useful for laptop as all servers are without wireless interface
+# alias iwconfig='iwconfig wlan0'
+#
+## select browser to test ##
+# alias ff4='/opt/firefox4/firefox'
+# alias ff13='/opt/firefox13/firefox'
+# alias chrome='/opt/google/chrome/chrome'
+# alias opera='/opt/opera/opera'
+## default ff (firefox)
+# alias ff=ff13
+#
+# default browser
+# alias browser=chrome
+#
+## set some other defaults ##
+# alias df='df -H'
+# alias du='du -ch'
+#
+## pass options to free ##
+# alias meminfo='free -m -l -t'
+#
+## get top process eating memory
+# alias psmem='ps auxf | sort -nr -k 4'
+# alias psmem10='ps auxf | sort -nr -k 4 | head -10'
+# 
+## get top process eating cpu ##
+# alias pscpu='ps auxf | sort -nr -k 3'
+# alias pscpu10='ps auxf | sort -nr -k 3 | head -10'
+# 
+## Get server cpu info ##
+# alias cpuinfo='lscpu'
+# 
+## older system use /proc/cpuinfo ##
+##alias cpuinfo='less /proc/cpuinfo' ##
+# 
+## get GPU ram on desktop / laptop##
+# alias gpumeminfo='grep -i --color memory /var/log/Xorg.0.log'
 #
 # This will set a fancy prompt (PS1):
 # export PS1="\[\033[01;33m\][$USER@$HOSTNAME]\[\033[0;00m\] \[\033[01;32m\]\w\\$\[\033[0;00m\] "
