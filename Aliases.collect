@@ -200,10 +200,10 @@
 # alias mylogs2='sudo tail -f /var/log/{syslog,daemon.log,user.log,router.log}'
 # OTRS
 # alias vio='vi /opt/otrs/Kernel/{Config/Defaults.pm,Config.pm}'
-
+#
 # Kalendar
 # alias kal='clear;echo -n "Heutiges Datum: ";date;echo;cal -3'
-
+#
 # switch off
 # alias s &>/dev/null && unalias s
 # alias p &>/dev/null && unalias p
