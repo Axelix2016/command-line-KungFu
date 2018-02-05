@@ -28,6 +28,7 @@
 #
 # Self explaining aliases:
 # alias ver="cat /etc/lsb-release"
+# alias ver2="cat /etc/redhat-release"
 # alias ip="ip route get 8.8.8.8 | awk '{print $NF; exit}'"
 # alias dir="ls -al"
 # alias ll="ls -l"
