@@ -136,7 +136,7 @@
 # echo "Welcome, $USER!"
 # echo -e "Today is $(date)\nUptime: $(uptime)"
 # echo "Your personal settings have been loaded successfully."
-#
+# echo "Part1-------------------------------------------------"
 # Speicher-Platzfresser ermitteln:
 # alias ducks='du -cks * |sort -rn |head -11'
 #
@@ -157,6 +157,7 @@
 # sudo apt install bash-doc
 # /usr/share/doc/bash-doc/examples
 #
+# echo "Part2-------------------------------------------------"
 ###################
 # Appendix A      #
 # Sharpen the saw #
@@ -188,7 +189,7 @@
 # alias md=mkdir
 # alias rd=rmdir
 # alias su-='sudo su -'
-#
+# echo "Part3-------------------------------------------------"
 # inventions
 # alias fgg=jobs
 # alias ghist='history|grep'
@@ -201,19 +202,14 @@
 # OTRS
 # alias vio='vi /opt/otrs/Kernel/{Config/Defaults.pm,Config.pm}'
 #
-# Kalendar
+# Kalender
 # alias kal='clear;echo -n "Heutiges Datum: ";date;echo;cal -3'
 #
 # switch off
 # alias s &>/dev/null && unalias s
 # alias p &>/dev/null && unalias p
 #
-#
-#
-#
-#
-#
-#
+# echo "Done-------------------------------------------------"
 #####
 #eof#
 #####
