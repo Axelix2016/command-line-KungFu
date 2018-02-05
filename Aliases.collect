@@ -53,7 +53,9 @@
 # alias grep="grep -i"  # ignore case
 # alias x="exit"
 # alias dus='df -h'
+# alias ..="cd .."
 # alias ...='cd ../..'
+# alias c="clear"
 # alias umnt='umount /mnt/cdrom'  # cdrom / thumb drive.
 #
 ## shortcut  for iptables and pass it via sudo#
