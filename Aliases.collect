@@ -34,7 +34,7 @@
 # alias ll="ls -l"
 # alias all="ls -al"
 # alias groups="cut -d -f1 /etc/group |sort"
-# alias users=""cut -d -f1 /etc/passwd |sort"
+# alias users="cut -d -f1 /etc/passwd |sort"
 # alias ax="chmod a+x"
 # alias mount='mount |column -t'
 # alias mem='top'
