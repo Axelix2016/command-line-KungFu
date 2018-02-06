@@ -212,6 +212,42 @@
 # alias p &>/dev/null && unalias p
 #
 # echo "Done-------------------------------------------------"
+###########################
+# Docker make easy commands
+###########################
+# apt-get install curl
+# curl https://get.docker.com | bash
+# curl https://get.docker.com | bash
+# https://hub.docker.com
+# https://docs.docker.com
+# docker run hello-world
+# systemctl status docker
+# docker run --name my-mysql -e MYSQL_ROOT_PASSWORD=meinkennwort -d mysql
+# docker ps
+# docker run --name my-wordpress --link my-mysql:mysql -p :8080:80 -e
+# sudo docker run -it --entrypoint /bin/bash <container_name>
+# docker exec -it <mycontainer> bash
+# docker exec -t -i container_name /bin/bash
+# docker exec -it my-app-container bash
+# update
+# apt-get install openssh-server
+# mkdir /var/run/sshd
+# chmod 0755 /var/run/sshd
+# /usr/sbin/sshd
+# useradd --create-home --shell /bin/bash --groups sudo username ## includes 'sudo'
+# passwd username ## Enter a password
+# apt-get install x11-apps ## X11 demo applications (optional)
+# ifconfig | awk '/inet addr/{print substr($2,6)}' ## Display IP address (optional)
+## Now you can even run graphical applications (if they are installed in the container) using X11 forwarding to the SSH client:
+# ssh -X username@IPADDRESS
+# xeyes ## run an X11 demo app in the client
+# wget https://github.com/mastix/docker-entwickler-webseite/archive/master.zip
+# wget http://github.com/ziyaddin/xampp/archive/master.zip
+# curl https://github.com/ziyaddin/xampp/archive/master.zip -L -o MyFilename.zip
+# curl -L http://github.com/ziyaddin/xampp/archive/master.zip -o xampp.zip
+# Curl -L https://github.com/mastix/docker-entwickler-webseite/archive/master.zip -o mywebsite.zip
+# sudo apt-get install docker-compose
+# docker-compose -v
 #####
 #eof#
 #####
