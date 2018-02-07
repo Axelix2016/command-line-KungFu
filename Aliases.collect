@@ -221,6 +221,7 @@
 # https://docs.docker.com
 # docker run hello-world
 # sudo docker version
+# sudo usermod -aG docker <dockeruser>
 # systemctl status docker
 # docker run --name my-mysql -e MYSQL_ROOT_PASSWORD=meinkennwort -d mysql
 # docker ps
