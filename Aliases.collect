@@ -216,7 +216,7 @@
 # Docker make easy commands
 ###########################
 # apt-get install curl
-# curl https://get.docker.com | bash
+# sudo -E sh -c docker version
 # curl https://get.docker.com | bash
 # https://hub.docker.com
 # https://docs.docker.com
