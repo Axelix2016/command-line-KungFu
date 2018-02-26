@@ -249,6 +249,10 @@
 # Curl -L https://github.com/mastix/docker-entwickler-webseite/archive/master.zip -o mywebsite.zip
 # sudo apt-get install docker-compose
 # docker-compose -v
+# docker run -it -d --name nginx1 -p 80:80 nginx
+# docker ps -a
+# docker run -it -d --name ubuntu-test1 ubuntu
+# docker exec -it ubuntu-test1 bash
 #####
 #eof#
 #####
