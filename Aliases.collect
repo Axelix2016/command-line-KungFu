@@ -1,7 +1,7 @@
 ###################################
-# edit your bashfile
+# edit your personal bashfile #(for the logged in account -whoami) #the same can be done for root
 # $ vim ~/.bashrc
-# sudo git clone https://github.com/Axelix2016/command-line-KungFu.git
+# sudo git clone https://github.com/Axelix2016/command-line-KungFu.git #to get the files from git to your local directory
 ###################################
 # make it work immediadetely
 # source ~/.bashrc
@@ -22,14 +22,19 @@
 ###################################
 # Aliases to add to your bash: ####
 ###################################
-#
+###################################################################################
 # This command looks for files that were added or updated within the last 24 hours.
 # alias findRecent='find . -type f -mtime 0'
-#
+###################################################################################
+##########################
 # Self explaining aliases:
-# alias ver="cat /etc/lsb-release"
-# alias ver2="cat /etc/redhat-release"
-# alias ip="ip route get 8.8.8.8 | awk '{print $NF; exit}'"
+##########################
+# alias ver="cat /etc/lsb-release" #to show the installed version of your ubuntu linux
+# alias ver2="cat /etc/redhat-release" #to show the installed version of your redhat linux
+# alias ip="ip route get 8.8.8.8 | awk '{print $NF; exit}'" #to show your ip adress
+###########################################################################################
+# aliases to ease your admin work:
+###########################################################################################
 # alias dir="ls -al"
 # alias ll="ls -l"
 # alias all="ls -al"
@@ -71,32 +76,43 @@
 # Uncompress GZIP and BZIP archives:
 # alias untarz='tar -xzf'
 # alias untarj='tar -xjf'
+#
 ## reboot / halt / poweroff
 # alias reboot='sudo /sbin/reboot'
 # alias poweroff='sudo /sbin/poweroff'
 # alias halt='sudo /sbin/halt'
 # alias shutdown='sudo /sbin/shutdown'
-#
+################################################################################
+# some nginx helpers:
+################################################################################
 ## also pass it via sudo so whoever is admin can reload it without calling you #
+################################################################################
 # alias nginxreload='sudo /usr/local/nginx/sbin/nginx -s reload'
 # alias nginxtest='sudo /usr/local/nginx/sbin/nginx -t'
 # alias lightyload='sudo /etc/init.d/lighttpd reload'
 # alias lightytest='sudo /usr/sbin/lighttpd -f /etc/lighttpd/lighttpd.conf -t'
 # alias httpdreload='sudo /usr/sbin/apachectl -k graceful'
 # alias httpdtest='sudo /usr/sbin/apachectl -t && /usr/sbin/apachectl -t -D DUMP_VHOSTS'
+########################################################################################
 #
+########################################################################################
 ## All of our servers eth1 is connected to the Internets via vlan / router etc  ##
 # alias dnstop='dnstop -l 5  eth1'
 # alias vnstat='vnstat -i eth1'
 # alias iftop='iftop -i eth1'
 # alias tcpdump='tcpdump -i eth1'
 # alias ethtool='ethtool eth1'
-#
+########################################################################################
+############################
 # work on wlan0 by default #
-# Only useful for laptop as all servers are without wireless interface
+########################################################################
+# Only useful for laptop as all servers are without wireless interface #
+########################################################################
 # alias iwconfig='iwconfig wlan0'
 #
+############################
 ## select browser to test ##
+############################
 # alias ff4='/opt/firefox4/firefox'
 # alias ff13='/opt/firefox13/firefox'
 # alias chrome='/opt/google/chrome/chrome'
@@ -106,60 +122,84 @@
 #
 # default browser
 # alias browser=chrome
-#
+#############################
 ## set some other defaults ##
+#############################
 # alias df='df -H'
 # alias du='du -ch'
-#
+##########################
 ## pass options to free ##
 # alias meminfo='free -m -l -t'
-#
+################################
 ## get top process eating memory
+################################
 # alias psmem='ps auxf | sort -nr -k 4'
 # alias psmem10='ps auxf | sort -nr -k 4 | head -10'
-# 
+# ##############################
 ## get top process eating cpu ##
+################################
 # alias pscpu='ps auxf | sort -nr -k 3'
 # alias pscpu10='ps auxf | sort -nr -k 3 | head -10'
-# 
+# #######################
 ## Get server cpu info ##
+#########################
 # alias cpuinfo='lscpu'
-# 
+#################################### 
 ## older system use /proc/cpuinfo ##
-##alias cpuinfo='less /proc/cpuinfo' ##
-# 
+####################################
+# alias cpuinfo='less /proc/cpuinfo'
+# ##################################
 ## get GPU ram on desktop / laptop##
+####################################
 # alias gpumeminfo='grep -i --color memory /var/log/Xorg.0.log'
-#
+#####################################
 # This will set a fancy prompt (PS1):
+#####################################
 # export PS1="\[\033[01;33m\][$USER@$HOSTNAME]\[\033[0;00m\] \[\033[01;32m\]\w\\$\[\033[0;00m\] "
-#
+###################################################################
 # Add a greeting, to be displayed whenever Bash runs interactively:
 # echo "Welcome, $USER!"
 # echo -e "Today is $(date)\nUptime: $(uptime)"
 # echo "Your personal settings have been loaded successfully."
 # echo "Part1-------------------------------------------------"
+###################################################################
+##################################
 # Speicher-Platzfresser ermitteln:
+##################################
 # alias ducks='du -cks * |sort -rn |head -11'
 #
+#########################################
 # Find hidden processes (rootkit defense)
+#########################################
 # alias hidden='ls -d /proc/* |grep [0-9]|wc -l; ps ax |wc -l'
 # vergleicht die Anzahl laufender prozesse mit denen die ps ausgibt.
 # ist die Anzahl bei mehrmaliger Ausführung stark unterschiedlich ist was faul.
 #
+############################################
+# get interface config for each adapter ethx
+############################################
 # alias eth0='ifconfig eth0'
 # alias eth1='ifconfig eth1'
 # alias eth2='ifconfig eth2'
-#
+############################################
+# grepall to try it out:
+################
 # alias grepall="find -type f -exec grep -q $1 {} \; -print"
 #
+##################################################################
+# check & install updates and upgrades for your system
+##################################################################
 # alias checkupdates='sudo apt-get update && sudo apt-get upgrade'
 #
-# ubuntu examples:
+################################################
+# here you can find some useful ubuntu examples:
+################################################
 # sudo apt install bash-doc
 # /usr/share/doc/bash-doc/examples
 #
+################################################################
 # echo "Part2-------------------------------------------------"
+################################################################
 ###################
 # Appendix A      #
 # Sharpen the saw #
@@ -191,39 +231,54 @@
 # alias md=mkdir
 # alias rd=rmdir
 # alias su-='sudo su -'
+###############################################################
 # echo "Part3-------------------------------------------------"
+###############################################################
+############
 # inventions
+############
 # alias fgg=jobs
 # alias ghist='history|grep'
 # alias lf='find -type f|sort'
 # alias load='cat /proc/loadavg'
 # alias meminfo='cat /proc/meminfo'
+################################################################################################
 # logs
+################################################################################################
 # alias mylogs='sudo tail -f /var/log/{apache2/*log,squid/access.log,otrs.log,exim*log,messages}'
 # alias mylogs2='sudo tail -f /var/log/{syslog,daemon.log,user.log,router.log}'
+################################################################
 # OTRS
+################################################################
 # alias vio='vi /opt/otrs/Kernel/{Config/Defaults.pm,Config.pm}'
 #
+##########
 # Kalender
+##########
 # alias kal='clear;echo -n "Heutiges Datum: ";date;echo;cal -3'
 #
-# switch off
+####################
+# switch off aliases
+####################
 # alias s &>/dev/null && unalias s
 # alias p &>/dev/null && unalias p
 #
 # echo "Done-------------------------------------------------"
-###########################
-# Docker make easy commands
-###########################
+##################################
+# docker: basic commands / helpers
+##################################
 # sudo apt-get install curl
 # curl https://get.docker.com | bash
 # https://hub.docker.com
 # https://docs.docker.com
 # docker run hello-world
+# docker run -it -d ubuntu #to run a ubuntu container detached
+# docker exec -it <ubuntu-id> /bin/bash #to get in the container
+# Ctrl-P + Ctrl Q #to get out of the container
 # sudo docker version
 # sudo usermod -aG docker <dockeruser>
 # systemctl status docker
-# docker run --name my-mysql -e MYSQL_ROOT_PASSWORD=meinkennwort -d mysql
+# docker run --name mysqlx -e MYSQL_ROOT_PASSWORD=<mypassword> -d mysql
 # docker ps
 # docker run --name my-wordpress --link my-mysql:mysql -p :8080:80 -e
 # sudo docker run -it --entrypoint /bin/bash <container_name>
@@ -248,7 +303,7 @@
 # curl -L http://github.com/ziyaddin/xampp/archive/master.zip -o xampp.zip
 # Curl -L https://github.com/mastix/docker-entwickler-webseite/archive/master.zip -o mywebsite.zip
 #########################################################
-# docker commands to be used with an alias:
+# docker: commands to be used with an alias:
 #########################################################                      
 # sudo apt install docker #to install docker, but using the docker install script from get.docker.com is better
 # sudo apt install docker-compose #installs docker compose, the sucessor of fig
