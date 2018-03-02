@@ -247,12 +247,22 @@
 # curl https://github.com/ziyaddin/xampp/archive/master.zip -L -o MyFilename.zip
 # curl -L http://github.com/ziyaddin/xampp/archive/master.zip -o xampp.zip
 # Curl -L https://github.com/mastix/docker-entwickler-webseite/archive/master.zip -o mywebsite.zip
-# sudo apt-get install docker-compose
-# docker-compose -v
-# docker run -it -d --name nginx1 -p 80:80 nginx
-# docker ps -a
-# docker run -it -d --name ubuntu-test1 ubuntu
-# docker exec -it ubuntu-test1 bash
+#########################################################
+# docker commands to be used with an alias:
+#########################################################                      
+# sudo apt install docker #to install docker, but using the docker install script from get.docker.com is better
+# sudo apt install docker-compose #installs docker compose, the sucessor of fig
+# docker-compose -v #to see docker-compose version
+# alias drun="docker run -it -d --name nginx1 -p 80:80 nginx"
+# alias doa="docker ps -a" #to show all containers running
+# alias dim="docker images #to show all images"
+# alias ds="docker stop" #<id> #to stop a container
+# alias dstart="docker start" #<id> #to start the container <id>
+# alias drm="docker rm" #<id> #to remove a container
+# alias drmi="docker rmi" #<id> #to remove an image
+# alias drun="docker run -it -d --name ubuntu-test1 ubuntu" #to start a container with ubuntu latest
+# alias dex="docker exec -it ubuntu-test1 bash" #to get inside the container and start a bash
+# alias drunb="docker run --name=nginx -d -v ~/nginxlogs:/var/log/nginx -p 5000:80 nginx" #to bindmount a volume
 #####
 #eof#
 #####
