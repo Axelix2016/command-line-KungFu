@@ -1,20 +1,21 @@
 ###################################
 # edit your personal bashfile #(for the logged in account -whoami) #the same can be done for root
-# $ vim ~/.bashrc
+# vim ~/.bashrc
 # sudo git clone https://github.com/Axelix2016/command-line-KungFu.git #to get the files from git to your local directory
 ###################################
-# make it work immediadetely
-# source ~/.bashrc
-# or just
+# make it work immediadetely:
+###################################
 # . ~/.bashrc
 # to restart bash
 ###################################
-# use echo
+# use echo to add aliases
+###################################
 # echo "alias aliasname='command'" >> ~/.bash_aliases && tail -1 ~/.bash_aliases && source ~/.bash_aliases && echo 'added to bash'
 #
-###################################
-# load aliases from .bash_aliases #
-###################################
+############################################################################
+# load aliases from .bash_aliases (put this sequence in your .bashrc file) #
+# you can also uses your own file e.g. ".Aliases.collect"                  #
+############################################################################
 # if [ -f ~/.bash_aliases ]; then
 #     . ~/.bash_aliases
 # fi
