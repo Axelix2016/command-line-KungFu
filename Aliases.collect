@@ -319,6 +319,8 @@
 # alias drun="docker run -it -d --name ubuntu-test1 ubuntu" #to start a container with ubuntu latest
 # alias dex="docker exec -it ubuntu-test1 bash" #to get inside the container and start a bash
 # alias drunb="docker run --name=nginx -d -v ~/nginxlogs:/var/log/nginx -p 5000:80 nginx" #to bindmount a volume
-#####
-#eof#
-#####
+# echo "Adding Docker Commands-------------------------------"
+# echo "Done-------------------------------------------------"
+#################################################################################################################
+#                                                eof                                                            #
+#################################################################################################################
