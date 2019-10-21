@@ -1,0 +1,1 @@
+netstat -nptl ### makes your running ports and services pretty ###
