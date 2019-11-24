@@ -1,3 +1,9 @@
+#############################################################################
+# Instructions:                                                             #
+#               remove the # at the first row if you want to use a command  #
+#               follow the Instructions below to activate it                #
+#############################################################################
+#
 ###################################
 # edit your personal bashfile #(for the logged in account -whoami) #the same can be done for root
 # vim ~/.bashrc
