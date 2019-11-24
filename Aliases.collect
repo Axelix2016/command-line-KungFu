@@ -409,6 +409,199 @@ nmap -sV -p 1-65535 192.168.1.1/24
 ################################################################
 # echo "Adding Docker Commands-------------------------------"
 # echo "Done-------------------------------------------------"
+################################################################
+# BTFM                                                         #
+################################################################
+# echo "Adding BTFM Commands-------------------------------"
+## useful linux commands
+## system information
+#uname -a
+#uptime
+#timedatectl
+#mount
+#echo $PATH
+#
+## user information
+## view logged in users
+#w
+#
+## show if a user has ever logged in remotely
+#lastlog
+#last
+#
+## view failed logins ##
+# alias faillog = 'faillog -a'
+#
+## view local user accounts ##
+# alias showpass = 'cat /etc/passwd'
+# alias shadow = 'cat /etc/shadow'
+#
+## view local groups ##
+# alias groups = 'cat /etc/group'
+#
+## view sudo access
+# alias sudoers = 'cat /etc/sudoers'
+#
+## view accounts with UID0
+# alias zeros = 'awk -F: '($3=="0"){print}' /etc/passwd'
+# alias zero = 'egrep ':0+' /etc/passwd'
+# 
+## view root authorized SSH key authentications
+#cat /root/.ssh/authorized_keys
+#
+## list of files opened by user
+#lsof -u <USER_NAME>
+#
+## view root user bash history
+#cat /root/.bash_history
+#history >history-xx-xx-xxxx.txt
+#
+## view network interfaces
+#ifconfig
+#
+## view network connections
+#netstat -antup
+#netstat -plantux
+#
+## view listening ports
+#netstat -nap
+#
+## view routes
+#route
+#
+## view arp tables
+#arp -a
+# 
+## list of processes listening on ports
+#lsof -i
+# 
+## view processes
+#ps -aux
+#
+## list of load modules
+#lsmod
+#
+## list of open files
+#lsof
+#
+## list of open files using the network
+#lsof -nPi | cut -f 1 -d " " | uniq | tail -n +2
+#
+## list of open files on specific process
+#lsof -c <SERVICE_NAME>
+#
+## get all open files on specific process ID
+#lsof -p <PID>
+#
+## list of unlinked processes running
+#lsof +L1
+#get path of suspicious process PID
+#ls -al /proc/<PID>/exe
+#
+## save file for further malware binary analysis
+#cp /proc/<PID>/exe >/<SUSPICIOUS FILE NAME TO SAVE>.elf
+#
+## monitor logs in real time
+#less +F /var/log/messages
+#
+## list services
+#chkconfig --list
+#
+## view pam.d files
+#cat /etc/pam.d/common*
+#
+## list cron jobs
+#crontab -l
+#
+## review unusual cron jobs
+#cat /etc/crontab
+#ls /etc/cron.*
+#
+## view root user command history
+#cat /root/.*history
+#
+## view last logins
+#last
+#
+## view disk space
+#df -ah
+#
+## view directory listing for /etc/init.d
+#ls -la /etc/init.d
+#
+## get more info for a file
+#stat -x <FILE NAME>
+#
+#########################################################
+# diff filel file2              ## compare files
+# rm -rf dir                    ## force remove dir
+# shred -f -u file              ## Overwrite/delete file
+# touch -r ref file file        ## matches ref_file timestamp
+# touch -t YYYY11t1DDHHSS file  ## Set file timestamp
+# sudo fdisk -1                 ## List connected drives
+# mount /dev/sda# /mnt/usbkey   ## mount USB key
+# md5sum -t file                ## Compute md5 hash
+# echo -n "str 11 I md5sum      ## Generate md5 hash
+# shalsum file                  ## SHAl hash of file
+# sort -u                       ## Sort/show unique lines
+# grep -c ''str'' file          ## Count lines w/ ''str''
+# tar cf file.tar files         ## Create .tar from files
+# tar xf file.tar               ## Extract .tar
+# tar czf file.tar.gz files     ## Create .tar.gz
+# tar xzf file.tar.gz           ## Extract .tar.gz
+# tar cjf file.tar.bz2 files    ## Create .tar.bz2
+# tar xjf file.tar.bz2          ## Extract .tar.bz2
+# gzip file                     ## Compress/rename file
+# gzip -d file. gz              ## Decompress file.gz
+# upx -9 -o out.exe orig.exe    ## UPX packs orig.exe
+# zip -r zipname.zip \Directory\' ## Create zip
+# dd skip=lOOO count=2000 bs=S if=file of=file ## Cut block 1K-3K from file
+# split -b 9K \ file prefix     ## Split file into 9K chunks
+# awk 'sub("$"."\r")' unix.txt win.txt ## Win compatible txt file
+# find -i -name file -type '.pdf ## Find PDF files
+# find I -perm -4000 -o -perm -2000 -exec ls -ldb {) \; ## Search for setuid files
+# dos2unix file                 ## Convert to ~nix format
+# file file                     ## Determine file type/info
+# chattr (+/-)i file            ## Set/Unset immutable bit
+#########################################################
+# wget http:// url -0 url.txt -o /dev/null ##Grab url
+# rdesktop ip                              ##Remote Desktop to ip
+# scp /tmp/file user@x.x.x.x:/tmp/file     ##Put file
+# scp user@ remoteip :/tmp/file /tmp/file  ##Get file
+# useradd -m user                          ##Add user
+# passwd user                              ##Change user password
+# rmuser unarne                            ##Remove user
+# script -a outfile                        ##Record shell : Ctrl-D stops
+# apropos subject                          ##Find related command
+# history                                  ##View users command history
+# ! num                                    ##Executes line # in history
+########################################################
+# unset HISTFILE                           ##Disable history logging
+# ssh user@ ip arecord - I aplay -         ##Record remote mic
+# gee -o outfile myfile.c                  ##Compile C,C++
+# init 6                                   ##Reboot (0 = shutdown)
+#
+# cat /etc/ 1 syslog 1 .conf 1 grep -v ''"#'' ##List of log files
+#
+# grep 'href=' file 1cut -d"/" -f3 I grep  ##Strip links in url.com
+# url lsort -u
+#
+# dd if=/dev/urandom of= file bs=3145"28
+# count=lOO                                ##make random 311B file
+########################################################
+# LINUX II COVER YOUR TRACKS II COMMANDS
+# echo "" /var/log/auth.log ##Clear auth.log file
+# echo '''' -/.bash history ##Clear current user bash history
+# rrn -/.bash histor/ -rf ##Delete .bash_history file
+# history -c ##Clear current session history
+# export HISTFILESIZE=O ##Set historj max lines to 0
+# export HISTSIZE=O ##Set histroy max commands to 0
+# unset HISTFILE ##Disable history logging (need to logout to take effect)
+# kill -9 $$ ##Kills current session
+# ln /dev/null -/.bash_history -sf ##Permanently send all bash history commands to /dev/null
+# echo "Adding Docker Commands------------------------------Done"
+###########################################################################################
+
 #################################################################################################################
 #                                                eof                                                            #
 #################################################################################################################
