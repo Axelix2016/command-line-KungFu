@@ -11,7 +11,7 @@
 ###################################
 # make it work immediadetely:
 ###################################
-# . ~/.bashrc
+alias basher=". ~/.bashrc"
 # to restart bash
 ###################################
 # use echo to add aliases
@@ -29,6 +29,8 @@
 ###################################
 # Aliases to add to your bash: ####
 ###################################
+######### newest ##################
+
 ###################################################################################
 # This command looks for files that were added or updated within the last 24 hours.
 # alias findRecent='find . -type f -mtime 0'
@@ -42,11 +44,11 @@
 ###########################################################################################
 # aliases to ease your admin work:
 ###########################################################################################
-# alias dir="ls -al"
-# alias ll="ls -l"
-# alias all="ls -al"
-# alias groups="cut -d: -f1 /etc/group |sort"
-# alias users="cut -d: -f1 /etc/passwd |sort"
+ alias dir="ls -al"
+ alias ll="ls -l"
+ alias all="ls -al"
+ alias groups="cut -d: -f1 /etc/group |sort"
+ alias users="cut -d: -f1 /etc/passwd |sort"
 # alias ax="chmod a+x"
 # alias mount='mount |column -t'
 # alias mem='top'
@@ -61,25 +63,25 @@
 # alias chx='chmod 755'
 # alias chr='chmod 644'
 # alias ports='netstat -tulanp'
-# alias lsh='ls -lhXG' # long listing, human-readable, sort by extension, do not show group info
+ alias lsh="ls -lhXG" # long listing, human-readable, sort by extension, do not show group info
 # alias grep="grep -i"  # ignore case
-# alias x="exit"
-# alias dus='df -h'
-# alias ..="cd .."
-# alias ...='cd ../..'
-# alias c="clear"
+ alias x="exit"
+ alias dus="df -h"
+ alias ..="cd .."
+ alias ...="cd ../.."
+ alias c="clear"
 # alias umnt='umount /mnt/cdrom'  # cdrom / thumb drive.
-#
+###############################################
 ## shortcut  for iptables and pass it via sudo#
 # alias ipt='sudo /sbin/iptables'
-#
+######################
 ## display all rules #
 # alias iptlist='sudo /sbin/iptables -L -n -v --line-numbers'
 # alias iptlistin='sudo /sbin/iptables -L INPUT -n -v --line-numbers'
 # alias iptlistout='sudo /sbin/iptables -L OUTPUT -n -v --line-numbers'
 # alias iptlistfw='sudo /sbin/iptables -L FORWARD -n -v --line-numbers'
 # alias firewall=iptlist
-#
+####################################
 # Uncompress GZIP and BZIP archives:
 # alias untarz='tar -xzf'
 # alias untarj='tar -xjf'
@@ -132,8 +134,8 @@
 #############################
 ## set some other defaults ##
 #############################
-# alias df='df -H'
-# alias du='du -ch'
+ alias df="df -H"
+ alias du="du -ch"
 ##########################
 ## pass options to free ##
 # alias meminfo='free -m -l -t'
@@ -162,18 +164,18 @@
 #####################################
 # This will set a fancy prompt (PS1):
 #####################################
-# export PS1="\[\033[01;33m\][$USER@$HOSTNAME]\[\033[0;00m\] \[\033[01;32m\]\w\\$\[\033[0;00m\] "
+ export PS1="\[\033[01;33m\][$USER@$HOSTNAME]\[\033[0;00m\] \[\033[01;32m\]\w\\$\[\033[0;00m\] "
 ###################################################################
 # Add a greeting, to be displayed whenever Bash runs interactively:
-# echo "Welcome, $USER!"
-# echo -e "Today is $(date)\nUptime: $(uptime)"
-# echo "Your personal settings have been loaded successfully."
-# echo "Part1-------------------------------------------------"
+echo "Welcome, $USER!"
+echo -e "Today is $(date)\nUptime: $(uptime)"
+echo "Your personal settings have been loaded successfully."
+echo "Part1-----"
 ###################################################################
 ##################################
 # Speicher-Platzfresser ermitteln:
 ##################################
-# alias ducks='du -cks * |sort -rn |head -11'
+ alias ducks="du -cks * |sort -rn |head -11"
 #
 #########################################
 # Find hidden processes (rootkit defense)
@@ -205,7 +207,7 @@
 # /usr/share/doc/bash-doc/examples
 #
 ################################################################
-# echo "Part2-------------------------------------------------"
+ echo "-------------Part2---"
 ################################################################
 ###################
 # Appendix A      #
@@ -239,7 +241,7 @@
 # alias rd=rmdir
 # alias su-='sudo su -'
 ###############################################################
-# echo "Part3-------------------------------------------------"
+ echo "------------------------Part3---"
 ###############################################################
 ############
 # inventions
@@ -270,7 +272,7 @@
 # alias s &>/dev/null && unalias s
 # alias p &>/dev/null && unalias p
 #
-# echo "Done-------------------------------------------------"
+ echo "------------------------------------Done!"
 ##################################
 # docker: basic commands / helpers
 ##################################
