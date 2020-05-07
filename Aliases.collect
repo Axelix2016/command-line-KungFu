@@ -380,26 +380,26 @@ Nmap Target Selection
 # Scan using a specific NSE script	nmap -sV -p 443 –script=ssl-heartbleed.nse 192.168.1.1
 # Scan with a set of scripts	nmap -sV --script=smb* 192.168.1.1
 ####################################################
-A scan to search for DDOS reflection UDP services
+#A scan to search for DDOS reflection UDP services
 ####################################################
-Scan for UDP DDOS reflectors	nmap –sU –A –PN –n –pU:19,53,123,161 –script=ntp-monlist,dns-recursion,snmp-sysdescr 192.168.1.0/24
+#Scan for UDP DDOS reflectors	nmap –sU –A –PN –n –pU:19,53,123,161 –script=ntp-monlist,dns-recursion,snmp-sysdescr 192.168.1.0/24
 ####################################################
-HTTP Service Information
+#HTTP Service Information
 ####################################################
-Gather page titles from HTTP services	nmap --script=http-title 192.168.1.0/24
-Get HTTP headers of web services	nmap --script=http-headers 192.168.1.0/24
-Find web apps from known paths	nmap --script=http-enum 192.168.1.0/24
+#Gather page titles from HTTP services	nmap --script=http-title 192.168.1.0/24
+#Get HTTP headers of web services	nmap --script=http-headers 192.168.1.0/24
+#Find web apps from known paths	nmap --script=http-enum 192.168.1.0/24
 ####################################################
-Detect Heartbleed SSL Vulnerability
+#Detect Heartbleed SSL Vulnerability
 ####################################################
-Heartbleed Testing	nmap -sV -p 443 --script=ssl-heartbleed 192.168.1.0/24
+#Heartbleed Testing	nmap -sV -p 443 --script=ssl-heartbleed 192.168.1.0/24
 ####################################################
-IP Address information
+#IP Address information
 ####################################################
-Find Information about IP address	nmap --script=asn-query,whois,ip-geolocation-maxmind 192.168.1.0/24
+#Find Information about IP address	nmap --script=asn-query,whois,ip-geolocation-maxmind 192.168.1.0/24
 ####################################################
-To get started this is a simple command for scanning your local network (class C or /24):
-nmap -sV -p 1-65535 192.168.1.1/24
+#To get started this is a simple command for scanning your local network (class C or /24):
+#nmap -sV -p 1-65535 192.168.1.1/24
 ####################################################
 # EXAMPLES:
 #           nmap -v -A scanme.nmap.org
