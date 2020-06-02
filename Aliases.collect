@@ -49,6 +49,15 @@ alias basher=". ~/.bashrc"
  alias all="ls -al"
  alias groups="cut -d: -f1 /etc/group |sort"
  alias users="cut -d: -f1 /etc/passwd |sort"
+ alias x="exit"
+ alias dus="df -h"
+ alias ..="cd .."
+ alias ...="cd ../.."
+ alias c="clear"
+ alias lsh="ls -lhXG" # long listing, human-readable, sort by extension, do not show group info
+ alias ux="chmod u+x"
+ alias df="df -H"
+ alias du="du -ch"
 # alias ax="chmod a+x"
 # alias mount='mount |column -t'
 # alias mem='top'
@@ -63,13 +72,7 @@ alias basher=". ~/.bashrc"
 # alias chx='chmod 755'
 # alias chr='chmod 644'
 # alias ports='netstat -tulanp'
- alias lsh="ls -lhXG" # long listing, human-readable, sort by extension, do not show group info
 # alias grep="grep -i"  # ignore case
- alias x="exit"
- alias dus="df -h"
- alias ..="cd .."
- alias ...="cd ../.."
- alias c="clear"
 # alias umnt='umount /mnt/cdrom'  # cdrom / thumb drive.
 ###############################################
 ## shortcut  for iptables and pass it via sudo#
@@ -134,8 +137,7 @@ alias basher=". ~/.bashrc"
 #############################
 ## set some other defaults ##
 #############################
- alias df="df -H"
- alias du="du -ch"
+
 ##########################
 ## pass options to free ##
 # alias meminfo='free -m -l -t'
