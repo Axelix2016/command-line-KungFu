@@ -58,6 +58,7 @@ alias basher=". ~/.bashrc"
  alias ux="chmod u+x"
  alias df="df -H"
  alias du="du -ch"
+ alias vmtools="sudo apt-get install open-vm-tools"
 # alias ax="chmod a+x"
 # alias mount='mount |column -t'
 # alias mem='top'
@@ -332,11 +333,11 @@ echo "Part1-----"
 #########################################################
 # localhost: 8834 # Nessus
 #########################################################
-# sudo apt-get install open-vm-tools
+
 #########################################################
 # nmap commands
 #########################################################
-Nmap Target Selection
+# Nmap Target Selection
 #########################################################
 # Scan a single IP	nmap 192.168.1.1
 # Scan a host	nmap www.testhostname.com
