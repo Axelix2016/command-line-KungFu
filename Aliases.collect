@@ -8,6 +8,14 @@
 # edit your personal bashfile #(for the logged in account -whoami) #the same can be done for root
 # vim ~/.bashrc
 # sudo git clone https://github.com/Axelix2016/command-line-KungFu.git #to get the files from git to your local directory
+############################################################################
+# load aliases from .bash_aliases (put this sequence in your .bashrc file) #
+# you can also uses your own file e.g. ".Aliases.collect"                  #
+############################################################################
+# if [ -f ~/.bash_aliases ]; then
+#     . ~/.bash_aliases
+# fi
+#
 ###################################
 # make it work immediadetely:
 ###################################
@@ -18,19 +26,14 @@ alias basher=". ~/.bashrc"
 ###################################
 # echo "alias aliasname='command'" >> ~/.bash_aliases && tail -1 ~/.bash_aliases && source ~/.bash_aliases && echo 'added to bash'
 #
-############################################################################
-# load aliases from .bash_aliases (put this sequence in your .bashrc file) #
-# you can also uses your own file e.g. ".Aliases.collect"                  #
-############################################################################
-# if [ -f ~/.bash_aliases ]; then
-#     . ~/.bash_aliases
-# fi
-#
 ###################################
 # Aliases to add to your bash: ####
 ###################################
 ######### newest ##################
-
+# alias c=""clear"
+#
+#
+#
 ###################################################################################
 # This command looks for files that were added or updated within the last 24 hours.
 # alias findRecent='find . -type f -mtime 0'
