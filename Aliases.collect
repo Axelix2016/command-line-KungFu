@@ -44,7 +44,19 @@ alias basher=". ~/.bashrc"
 ###########################################################################################
 # aliases to ease your admin work:
 ###########################################################################################
- alias dir="ls -al"
+# convenience redefinitions
+# alias cd..='cd ..'
+# alias cd-='cd -'
+# alias dselect='dselect --expert'
+# alias fg-='fg -'
+# alias l='ls -l'
+# alias ll='ls -la'
+# alias lla='ls -la'
+# alias ls='ls --color=auto'
+# alias md=mkdir
+# alias rd=rmdir
+# alias su-='sudo su -'
+alias dir="ls -al"
  alias ll="ls -l"
  alias all="ls -al"
  alias groups="cut -d: -f1 /etc/group |sort"
@@ -231,18 +243,6 @@ echo "Part1-----"
 # alias mv='mv -i'
 # alias rm='rm -i'
 #
-# convenience redefinitions
-# alias cd..='cd ..'
-# alias cd-='cd -'
-# alias dselect='dselect --expert'
-# alias fg-='fg -'
-# alias l='ls -l'
-# alias ll='ls -la'
-# alias lla='ls -la'
-# alias ls='ls --color=auto'
-# alias md=mkdir
-# alias rd=rmdir
-# alias su-='sudo su -'
 ###############################################################
  echo "------------------------Part3---"
 ###############################################################
